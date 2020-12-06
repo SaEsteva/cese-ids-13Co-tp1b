@@ -24,24 +24,36 @@
 /*=====[Definitions of external public global variables]=====================*/
 
 /*=====[Definitions of public global variables]==============================*/
+/*!
+* Estructura que define los datos de Esteban Volentini
+*/
 
 static const struct alumno_s ESTEBAN_VOLENTINI = {
     .apellidos = "VOLENTINI",
     .nombres = "Esteban Daniel",
     .documento = "23.517.968",
 };
-
+/*!
+* Estructura que define los datos de Santiago Esteva
+*/
 static const struct alumno_s SANTIAGO_ESTEVA = {
     .apellidos = "ESTEVA",
     .nombres = "Santiago",
     .documento = "37.654.905",
 };
 
+/*!
+* Se crea un arreglo con todos los alumnos 
+*/
+
 const alumno_t ALUMNOS[] = {
     &ESTEBAN_VOLENTINI,
     &SANTIAGO_ESTEVA,
 };
 
+/*!
+* Variable con la cantida de alumnos que contiene el arreglo
+*/
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Definitions of private global variables]=============================*/
@@ -54,6 +66,9 @@ const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
     int resultado;
+    /*!
+    * Se define un arreglo char para imprimir los datos con el formato serialziado
+    */
     const char FORMATO[] = "{"
         "\"documento\":\"%s\","
         "\"apellidos\":\"%s\","

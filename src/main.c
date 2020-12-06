@@ -33,7 +33,14 @@
 /*=====[Implementations of interrupt functions]==============================*/
 
 /*=====[Implementations of private functions]================================*/
-
+/*!
+* \biref Funcion principal del programa
+*
+* @param argc: cantidad de elementos 
+* @param argv: arreglo de punteros a cada uno de los elementos
+* @return resultado: retorna 0 cuando se ejecuta correctamente
+* 
+*/
 int main(int argc, char *argv[]) {
     char cadena[2048];
 
